@@ -26,7 +26,7 @@ class AnalysisTestClient:
     
     def print_result(self, test_name, result, details=""):
         """Print a test result"""
-        status = "✓ PASS" if result else "✗ FAIL"
+        status = "[PASS]" if result else "[FAIL]"
         print(f"{status}: {test_name}")
         if details:
             print(f"     {details}")
@@ -241,9 +241,9 @@ class AnalysisTestClient:
         print(f"Success Rate: {(passed_tests/total_tests*100):.1f}%")
         
         if passed_tests == total_tests:
-            print("\n✓ ALL TESTS PASSED!")
+            print("\n[SUCCESS] ALL TESTS PASSED!")
         else:
-            print("\n✗ SOME TESTS FAILED")
+            print("\n[FAILED] SOME TESTS FAILED")
             print("\nFailed tests:")
             for test_name, result in self.test_results:
                 if not result:
