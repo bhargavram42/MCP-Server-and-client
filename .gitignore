@@ -13,3 +13,9 @@ venv/
 # OS
 .DS_Store
 Thumbs.db
+mcp_venv/
+venv/
+.env
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
